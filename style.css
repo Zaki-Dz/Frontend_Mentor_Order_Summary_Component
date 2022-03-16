@@ -1,0 +1,145 @@
+:root {
+	--main-color: #382ae1;
+	--alt-color: #766cf1;
+	--text-color: #25325a;
+	--p-color: #737ca3;
+	--transition: 0.3s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e0e8ff;
+	background-image: url('images/pattern-background-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	min-height: 100vh;
+	font-family: roboto;
+}
+
+@media (max-width: 767px) {
+	body {
+		background-image: url('images/pattern-background-mobile.svg');
+	}
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 767px) {
+	main {
+		padding: 0 20px;
+	}
+}
+
+.sr-only {
+	display: none;
+}
+
+.card {
+	max-width: 400px;
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 20px 30px #c7d0f7;
+}
+
+.illustration {
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.content {
+	padding: 2rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.card-title {
+	color: var(--text-color);
+}
+
+.description {
+	color: var(--p-color);
+	font-size: 0.8rem;
+}
+
+.plan {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	background-color: #f8f9fe;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.plan-details {
+	flex: 1;
+	text-align: left;
+}
+
+.plan-name {
+	color: var(--text-color);
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+@media (max-width: 767px) {
+	.plan-name {
+		font-size: 0.8rem;
+	}
+}
+
+.price {
+	font-size: 0.8rem;
+	color: var(--p-color);
+}
+
+.change {
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: var(--main-color);
+	transition: var(--transition);
+}
+
+.change:hover {
+	color: var(--alt-color);
+}
+
+.buy {
+	background-color: var(--main-color);
+	border-radius: 10px;
+	padding: 0.5rem;
+	color: white;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+	transition: var(--transition);
+	box-shadow: 0 20px 20px #dcd8fb;
+}
+
+.buy:hover {
+	background-color: var(--alt-color);
+}
+
+.cancel {
+	color: var(--p-color);
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	transition: var(--transition);
+}
+
+.cancel:hover {
+	color: var(--text-color);
+}
